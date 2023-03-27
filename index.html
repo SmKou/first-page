@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>First Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="web_author" content="Sm Kou">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="icon" href="./projects-icon.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+        *::-webkit-scrollbar { display: none }
+        html { font-size: 62.5% }
+        body {
+            position: relative;
+            margin: 0;
+            font-size: 1.5em;
+            line-height: 1;
+            font-weight: 400;
+            font-family: 'Nunito Sans';
+        }
+        .main-nav,
+        .page-nav { background: #808E9B }
+        .main-nav a,
+        .page-nav a { 
+            margin: 0 1.2rem;
+            color: #485460;
+        }
+        .page-nav a:hover { color: #E0E0E0 }
+        .main-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.6rem 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 10;
+        }
+        .main-nav a { font-size: calc(1.8rem + 0.32vw) }
+        .logo {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo .sm { font-family: 'Broken Heart' }
+        .logo .kou { 
+            margin-left: -0.2rem;
+            font-family: 'Zhi Mang Xing';
+        }
+        .logo:hover .sm,
+        .logo:hover .kou,
+        .w-logo:hover { color: #E0E0E0 }
+        .w-logo {
+            padding: 0 0.6rem;
+            font-family: 'League Spartan';
+            font-weight: bold;
+            letter-spacing: 0.2rem;
+        }
+        .page-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 10;
+        }
+        
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #intro div {
+            width: 95%;
+            max-width: 60rem;
+        }
+        #intro div:last-of-type { margin: 0 auto }
+        .button {
+            color: #1E272E;
+            background-color: transparent;
+            border: 1px solid #1E272E;
+        }
+        .button:hover {
+            color: #1EAEDB;
+            border-color: #1EAEDB;
+        }
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a class="logo" href="https://github.com/SmKou">
+            <span class="sm">Sm</span>
+            <span class="kou">寇</span>
+        </a>
+        <a class="w-logo" href="http://smkou.com">SmKou.d</a>
+    </nav>
+    <nav class="page-nav">
+        <a href="#intro">Intro</a>
+        <a href="#index">Index</a>
+        <a href="#new-page">New Page</a>
+        <a href="#registration">Registration</a>
+    </nav>
+    <main>
+        <section id="intro">
+            <div>
+                <h1>First Page</h1>
+                <p>A demonstration of basic html properties, based on an exercise from the Web Developer 2023 course hosted by Zero to Mastery.</p>
+            </div>
+            <div>
+                <a class="button" href="#index">Index</a>
+                <a class="button" href="#new-page">New Page</a>
+                <a class="button" href="#registration">Registration</a>
+            </div>
+        </section>
+        <section id="index">
+            <div class="nav">
+                <a href="#new-page">New Page</a>
+                <a href="#registration">Registration</a>
+            </div>
+            <div class="grid">
+                <div style="background: #8db600">Apple Green</div>
+                <div style="background: #ff0800">Apple Red</div>
+                <div style="background: #ffe135">Banana Yellow</div>
+                <div style="background: #f35d8b">Dragonfruit Pink</div>
+                <div style="background: #d23b68">Watermelon Pink</div>
+                <div style="background: #3c7646">Watermelon Green</div>
+            </div>
+        </section>
+        <section id="new-page">
+            <h1 class="page-title"><span>The</span>New Page</h1>
+            <a href="#index">Go Back</a>
+        </section>
+        <section id="registration">
+            <form method="GET">
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" name="first_name">
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" name="last_name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email_addr">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password_key" minlength="5">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday_date">
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="gender-male" name="gender_opt" value="male">
+                    <label for="gender-male">Male</label>
+                    <input type="radio" id="gender-female" name="gender_opt" value="female">
+                    <label for="gender-female">Female</label>
+                    <input type="radio" id="gender-other" name="gender_opt" value="other">
+                    <label for="gender-other">Other</label>
+                </div>
+                <label>Pets:</label>
+                <div>
+                    <input type="checkbox" id="pet-cat" name="pets_opt" value="cat">
+                    <label for="pet-cat">Cat</label>
+                    <input type="checkbox" id="pet-dog" name="pets_opt" value="dog">
+                    <label for="pet-dog">Dog</label>
+                    <input type="checkbox" id="pet-bird" name="pets_opt" value="bird">
+                    <label for="pet-bird">Bird</label>
+                    <input type="checkbox" id="pet-rodent" name="pets_opt" value="rodent">
+                    <label for="pet-rodent">Rodent</label>
+                </div>
+                <label for="cars">Cars:</label>
+                <select id="cars" name="cars_opt">
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="volvo">Volvo</option>
+                </select>
+                <div class="grid-out">
+                    <input type="submit" value="Register!">
+                    <input type="reset">
+                    <a class="button" href="#index">Return to Home</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
