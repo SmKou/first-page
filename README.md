@@ -26,4 +26,3 @@ View project at [first page](https://smkou.github.io/first-page).
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-Copyright (c) 2023 Stella Marie
