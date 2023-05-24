@@ -1,7 +1,7 @@
 # First Page
 By Stella Marie
 
-Demonstration site showcasing HTML and CSS.
+Demonstration site for single page slideshow.
 
 ## Technologies Used
 
@@ -20,8 +20,8 @@ View project at [first page](https://smkou.github.io/first-page).
 
 ## Known Bugs
 
-- Scrolling looks ugly
-- Colors
+- No html form validation
+- Register button in form panel links to same form
 
 ## License
 
